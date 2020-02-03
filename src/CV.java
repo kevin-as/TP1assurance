@@ -19,4 +19,14 @@ public class CV {
 		attentes = pAttentes;
 		
 	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println( "Bienvenue chez Barette!");
+		
+		String[] tableauCompetencesKevin = new String[]{"Java","C#","javascript"};
+		String[] tableauCompetencesCharles = new String[] {"Java","C#","javascript"};
+		CV cvKevin = new CV( "Abou Serhal", "Kevin", "Techniques en informatique", 1, tableauCompetencesKevin, "Aucune attente" );
+		CV cvCharles = new CV( "Allard", "Charles-Olivier", "Technique en informatique", 1, tableauCompetencesCharles, "Réussir le cours");
+	}
 }
