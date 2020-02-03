@@ -75,20 +75,24 @@ public class CV {
 		String[] tableauCompetencesCharles = new String[] {"Java","C#","javascript"};
 		CV cvKevin = new CV( "Abou Serhal", "Kevin", "Techniques en informatique", 1, tableauCompetencesKevin, "Aucune attente" );
 		CV cvCharles = new CV( "Allard", "Charles-Olivier", "Technique en informatique", 1, tableauCompetencesCharles, "Réussir le cours");
+		
+		afficher( cvKevin );
+		afficher( cvCharles );
 	}
 	
-	public void afficher( CV cv ) {
+	public static void afficher( CV cv ) {
 		
-		System.out.println("Affichage d'un CV\n");
+		System.out.println("\nAffichage d'un CV\n");
 		System.out.println("Nom : " + cv.getNom());
 		System.out.println("Prenom : " + cv.getPrenom());
 		System.out.println("Formation : " + cv.getFormation());
+		System.out.println("Expériences de travail : " + cv.getExperienceTravail() + " année(s)");
 		System.out.print("Competences : ");
 		
 		for (int i = 0; i < cv.getCompetences().length; i++) {
 			System.out.print(cv.getCompetences()[i]);
 			if (i < cv.getCompetences().length - 1) {
-				System.out.println(", ");
+				System.out.print(", ");
 			}
 		}
 		
