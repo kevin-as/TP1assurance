@@ -18,16 +18,23 @@ public class FichierEntree {
 		return nomFichier;
 	}
 	
-	public static void lireFichier() {
+	public static String[] lireFichier() {
 		String nomFichier = lireNomFichier();
 		Scanner scanner;
-		
+		List<String> listeLignesFichier = new ArrayList<>();
+		String[] lignesFichier = new String[0];
 		try {
-			scanner = new Scanner(new File("nomFichier"));
+			scanner = new Scanner(new File(nomFichier));
+			while (scanner.hasNextLine()) {
+				String ligne = scanner.nextLine();
+				listeLignesFichier.add(ligne);
+			}
+			lignesFichier = (String[]) listeLignesFichier.toArray();
 		} catch(Exception e) {
-			
+			System.out.println("\nLe fichier n'existe pas");
 		}
 		
+		return lignesFichier;
 	}
 	
 	
