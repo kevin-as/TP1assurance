@@ -67,7 +67,7 @@ public class CV {
 	public String getAttentes() {
 		return attentes;
 	}
-	public static void main(String[] args) {
+	public static void accueil() {
 		
 		System.out.println( "Bienvenue chez Barette!");
 		
