@@ -51,29 +51,44 @@ public class FichierEntree {
 		clients = listeClients.toArray(new String[0]);
 		
 		noLigne = separerParType(lignesFichier, noLigne, listePlats);
-		
+		plats = separerLignesTableau2D(listePlats);
 		
 		while(!lignesFichier[noLigne].equals("Fin")) {
 			listeCommandes.add(lignesFichier[noLigne]);
 			noLigne++;
 		}
+		commandes = separerLignesTableau2D(listeCommandes);
 		
 		System.out.println("CLIENTS");
 		for(String s : clients) {
-			System.out.println(s + ", ");
+			System.out.println(s);
 		}
-		/*
+		
 		System.out.println("PLATS");
-		for(String s : listePlats) {
-			System.out.println(s + ", ");
+		for (int i = 0; i < plats.length; i++) {
+			for (int j = 0; j < plats[i].length; j++) {
+				System.out.print(plats[i][j]);
+			}
+			System.out.println();
 		}
 		
 		System.out.println("COMMANDES");
-		for(String s : listeCommandes) {
-			System.out.println(s + ", ");
+		for (int i = 0; i < commandes.length; i++) {
+			for (int j = 0; j < commandes[i].length; j++) {
+				System.out.print(commandes[i][j]);
+			}
+			System.out.println();
 		}
-		*/
 		
+	}
+
+	private static String[][] separerLignesTableau2D(List<String> listeLignes) {
+		String[][] tableau = new String[listeLignes.size()][];
+		
+		for (int i = 0; i < tableau.length; i++) {
+			tableau[i] = listeLignes.get(i).split(" ");
+		}
+		return tableau;
 	}
 
 	private static int separerParType(String[] lignesFichier, int noLigne, List<String> listeVoulue) {
