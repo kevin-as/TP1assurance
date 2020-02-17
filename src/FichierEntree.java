@@ -18,18 +18,19 @@ public class FichierEntree {
 		return nomFichier;
 	}
 	
-	public static String[] lireFichier() {
+	public static String[] lireFichier() throws IOException{
 		String nomFichier = lireNomFichier();
 		Scanner scanner;
 		List<String> listeLignesFichier = new ArrayList<>();
-		String[] lignesFichier = new String[0];
+		String[] lignesFichier = null;
 		try {
 			scanner = new Scanner(new File(nomFichier));
 			while (scanner.hasNextLine()) {
 				String ligne = scanner.nextLine();
 				listeLignesFichier.add(ligne);
 			}
-			lignesFichier = (String[]) listeLignesFichier.toArray();
+			lignesFichier = listeLignesFichier.toArray(new String[0]);
+			scanner.close();
 		} catch(Exception e) {
 			System.out.println("\nLe fichier n'existe pas");
 		}
