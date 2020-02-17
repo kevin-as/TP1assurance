@@ -33,7 +33,9 @@ public class FichierEntree {
 			lignesFichier = listeLignesFichier.toArray(new String[0]);
 			scanner.close();
 		} catch(Exception e) {
-			System.out.println("\nLe fichier n'existe pas");
+			System.out.println("\nLe fichier n'existe pas.");
+			System.out.println("\nFermeture du programme.");
+			System.exit(0);
 		}
 		
 		return lignesFichier;
@@ -58,27 +60,6 @@ public class FichierEntree {
 			noLigne++;
 		}
 		commandes = separerLignesTableau2D(listeCommandes);
-		
-		System.out.println("CLIENTS");
-		for(String s : clients) {
-			System.out.println(s);
-		}
-		
-		System.out.println("PLATS");
-		for (int i = 0; i < plats.length; i++) {
-			for (int j = 0; j < plats[i].length; j++) {
-				System.out.print(plats[i][j]);
-			}
-			System.out.println();
-		}
-		
-		System.out.println("COMMANDES");
-		for (int i = 0; i < commandes.length; i++) {
-			for (int j = 0; j < commandes[i].length; j++) {
-				System.out.print(commandes[i][j]);
-			}
-			System.out.println();
-		}
 		
 	}
 
