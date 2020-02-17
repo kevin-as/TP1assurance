@@ -36,7 +36,6 @@ public class Principal {
 		}
 		
 		FichierSortie.sauvegarderFichier( tableauFactures );
-
 	}
 
 }
