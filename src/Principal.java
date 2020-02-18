@@ -3,7 +3,7 @@ import java.io.*;
 public class Principal {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		String[] tableauClients = new String[] {"Roger","Céline","Steeve"};
 		String[][] tableauPlats = new String[][] {{"Poutine", "10.5"},{"Frites","2.5"},{"Repas_Poulet","15.75"}};
 		String[][] tableauCommandes = new String[][] {{"Roger", "Poutine", "1"},{"Céline","Frites","2"},{"Céline","Repas_Poulet","1"}};

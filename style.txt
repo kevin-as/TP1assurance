@@ -1,0 +1,15 @@
+Normes de programmation
+
+Traitement des fichiers dans des classes séparées.
+
+Noms de classes, de variables et de méthodes significatifs et pertinents afin d'avoir du code auto-documenté.
+
+Noms de classes, de variables et de méthodes en français.
+
+Messages d'erreurs pertinents et clairs.
+
+Messages d'enregistrement de fichier clairs.
+
+Pas d'espaces entre les parenthèses et leur contenu.
+
+Initialiser les variables au début des méthodes.
