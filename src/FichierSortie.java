@@ -15,5 +15,7 @@ public class FichierSortie {
 		}
 		
 		writer.close();
+		
+		System.out.println("Les factures ont été enregistrées dans le fichier \"fichierSortie.txt\".");
 	}
 }
