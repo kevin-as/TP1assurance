@@ -4,11 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class TestFactures {
+import main.Factures;
 
+public class TestFactures {
+	
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testTaxes() {
+		assertEquals(114.98, Factures.calculerTaxes(100), 0);
 	}
 
 }
