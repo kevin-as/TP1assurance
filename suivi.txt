@@ -1,6 +1,6 @@
 Fonctionnalités ajoutées par membre de l'équipe
 
-Kevin : Gestion des erreurs et variables à afficher dans les factures
+Kevin : Gestion des erreurs et informations à afficher dans les factures
 
 Charles-Olivier : Calcul des taxes et affichage des factures (terminal et fichier)
 

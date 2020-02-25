@@ -1,0 +1,8 @@
+﻿Affichage des factures :
+	-Identique dans le terminal et le fichier
+	-Si erreur, entête bien identifiée
+	-Entête bien identifiée pour chaque client
+	-Afficher prix par plat, sous-total et total
+
+Calcul des taxes : 
+	-Constantes pour les taux
