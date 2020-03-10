@@ -1,6 +1,8 @@
 package main;
 
 import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class FichierSortie {
 	
@@ -19,5 +21,14 @@ public class FichierSortie {
 		writer.close();
 		
 		System.out.println("Les factures ont été enregistrées dans le fichier \"fichierSortie.txt\".");
+	}
+	
+	public static String sauvegarderFichierString(String chaine) throws IOException {
+		SimpleDateFormat formatDateHeure = new SimpleDateFormat("dd/MM-HH:mm");
+		Date date = new Date();
+		String nomFichier = "Facture-du-" + formatDateHeure.format(date) + ".txt";
+		
+		System.out.println(nomFichier);
+		return nomFichier;
 	}
 }

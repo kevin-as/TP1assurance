@@ -32,4 +32,8 @@ public class Factures {
 		return total;
 	}
 	
+	public static void afficherFacture(String[][] erreurs, String [][] facture) {
+		String factureAffichee = "";
+	}
+	
 }
