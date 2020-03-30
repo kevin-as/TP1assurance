@@ -27,8 +27,13 @@ public class FichierSortie {
 		SimpleDateFormat formatDateHeure = new SimpleDateFormat("dd/MM-HH:mm");
 		Date date = new Date();
 		String nomFichier = "Facture-du-" + formatDateHeure.format(date) + ".txt";
+		BufferedWriter writer = new BufferedWriter(new FileWriter(nomFichier));
 		
-		System.out.println(nomFichier);
+		writer.write(chaine);
+		
+		writer.close();
+		
+		System.out.println("Les factures ont été enregistrées dans le fichier \"" + nomFichier + "\"");
 		return nomFichier;
 	}
 }

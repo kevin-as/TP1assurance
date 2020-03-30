@@ -15,5 +15,10 @@ public class TestFactures {
 		assertEquals(27.02, Factures.calculerTaxes(23.50), 0);
 		assertEquals(14.37, Factures.calculerTaxes(12.50), 0);
 	}
+	
+	@Test
+	public void testAfficherFactures() {
+		
+	}
 
 }

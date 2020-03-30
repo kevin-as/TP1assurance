@@ -34,6 +34,7 @@ public class Factures {
 	
 	public static void afficherFacture(String[][] erreurs, String [][] facture) {
 		String factureAffichee = "";
+		
 	}
 	
 }
