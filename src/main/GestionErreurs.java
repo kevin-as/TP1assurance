@@ -84,4 +84,16 @@ public class GestionErreurs {
 		return tableauValide;
 		
 	}
+	
+	public static String[][] creerTableauCommandesErreurs( ArrayList<String[]> listeErreurs ) {
+		
+		String[][] tableauCommandesErreurs = new String[listeErreurs.size()][2];
+		
+		for ( int i = 0; i < listeErreurs.size(); i++ ) {
+			String[] ligne = listeErreurs.get(i);
+			tableauCommandesErreurs[i] = ligne;
+		}
+		
+		return tableauCommandesErreurs;
+	}
 }
