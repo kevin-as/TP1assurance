@@ -24,7 +24,7 @@ public class FichierSortie {
 	}
 	
 	public static String sauvegarderFichierString(String chaine) throws IOException {
-		SimpleDateFormat formatDateHeure = new SimpleDateFormat("dd-MM-HH");
+		SimpleDateFormat formatDateHeure = new SimpleDateFormat("dd-MM-HH-mm");
 		Date date = new Date();
 		String nomFichier = "Facture-du-" + formatDateHeure.format(date) + ".txt";
 		CreerFichier.creerFichier(nomFichier);
