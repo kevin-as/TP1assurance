@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class FichierSortie {
 	
-	public static void sauvegarderFichier( String[][] factures ) throws IOException {
+	public static String sauvegarderFichier( String[][] factures ) throws IOException {
 		
 		String nomFichier = "fichierSortie.txt";
 		BufferedWriter writer = new BufferedWriter(new FileWriter(nomFichier));
@@ -21,6 +21,8 @@ public class FichierSortie {
 		writer.close();
 		
 		System.out.println("Les factures ont été enregistrées dans le fichier \"fichierSortie.txt\".");
+		
+		return nomFichier;
 	}
 	
 	public static String sauvegarderFichierString(String chaine) throws IOException {

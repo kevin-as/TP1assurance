@@ -9,11 +9,18 @@ import org.junit.Test;
 import main.FichierSortie;
 
 public class TestFichierSortie {
-
+	
+	String[][] factures = { {"Roger", "Poutine", "2"}, {"Céline", "Frites", "2"}, {"Steeve", "Repas_Poulet", "1"} };
+	
 	@Test
-	public void testNomFichier() throws IOException {
+	public void testSauvegarderFichierString() throws IOException {
 		//actualiser date et heure avant de tester à nouveau
-		assertEquals("","Facture-du-.txt", FichierSortie.sauvegarderFichierString("yes"));
+		assertEquals("","Facture-du-17-04-15-14.txt", FichierSortie.sauvegarderFichierString("yes"));
+	}
+	
+	@Test
+	public void testSauvegarderFichier() throws IOException {
+		assertEquals("", "fichierSortie.txt", FichierSortie.sauvegarderFichier(factures));
 	}
 
 }
