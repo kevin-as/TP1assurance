@@ -1,0 +1,41 @@
+### ERREURS ###
+
+Roger Poutine 1 
+Erreur dans le nom du client. 
+Roger Poutine 1 
+Erreur dans le nom du client. 
+Céline Frites 2 
+Erreur dans le nom du client. 
+Céline Frites 2 
+Erreur dans le nom du client. 
+Céline Repas_Poulet 1 
+Erreur dans le nom du client. 
+Céline Repas_Poulet 1 
+Erreur dans le nom du client. 
+Roger Poutine 1 
+Erreur dans le nom du plat. 
+Roger Poutine 1 
+Erreur dans le nom du plat. 
+Céline Frites 2 
+Erreur dans le nom du plat. 
+Céline Frites 2 
+Erreur dans le nom du plat. 
+Céline Repas_Poulet 1 
+Erreur dans le nom du plat. 
+Céline Repas_Poulet 1 
+Erreur dans le nom du plat. 
+
+FACTURES
+
+Roger Poutine 1 
+Céline Frites 2 
+Céline Repas_Poulet 1 
+Roger Poutine 1 
+Céline Frites 2 
+Céline Repas_Poulet 1 
+Roger Poutine 1 
+Céline Frites 2 
+Céline Repas_Poulet 1 
+Roger Poutine 1 
+Céline Frites 2 
+Céline Repas_Poulet 1 

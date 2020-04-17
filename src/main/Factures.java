@@ -57,6 +57,7 @@ public class Factures {
 			}
 		}
 		
+		System.out.println(factureAffichee);
 		FichierSortie.sauvegarderFichierString(factureAffichee);
 	}
 	
