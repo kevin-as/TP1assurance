@@ -9,12 +9,12 @@ public class CreerFichier {
 		try {
 		      File myObj = new File(nomFichier);
 		      if (myObj.createNewFile()) {
-		        System.out.println("File created: " + myObj.getName());
+		        System.out.println("Fichier créé: " + myObj.getName());
 		      } else {
-		        System.out.println("File already exists.");
+		        System.out.println("Le fichier existe déjà.");
 		      }
 		    } catch (IOException e) {
-		      System.out.println("An error occurred.");
+		      System.out.println("Une erreur s'est produite.");
 		      e.printStackTrace();
 		    }
 	}

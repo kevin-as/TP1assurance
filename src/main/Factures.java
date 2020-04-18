@@ -10,6 +10,10 @@ public class Factures {
 	private static final DecimalFormat TOTAL = new DecimalFormat("0.00");
 	private static final DecimalFormat PRE_TOTAL = new DecimalFormat("0.000");
 	
+	public static void calculerFactures(String[][] facture) {
+		
+	}
+	
 	public static double calculerTaxes(double sousTotal) {
 		double total, montantTPS, montantTVQ;
 		String totalChaine;
@@ -35,7 +39,7 @@ public class Factures {
 	
 	public static void afficherFacture(String[][] erreurs, String [][] facture) throws IOException {
 		String factureAffichee = "";
-		if (!erreurs.equals(null)) {
+		if (erreurs.length > 0) {
 			factureAffichee += "### ERREURS ###\n";
 			
 			for (int i = 0; i < erreurs.length; i++) {
