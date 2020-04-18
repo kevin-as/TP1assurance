@@ -11,12 +11,22 @@ public class GestionErreurs {
 
 	public static String[][] gestionNomClient( String[] tableauClients, String[][] tableauCommandes ) {
 		
+		boolean nomPresent;
+		
 		for ( int i = 0; i < tableauCommandes.length; i++ ) {
+			nomPresent = false;
+			
 			for ( int j = 0; j < tableauClients.length; j++ ) {
 				
 				if ( tableauCommandes[i][0].equalsIgnoreCase( tableauClients[j] ) ) {
-					listeValide.add( tableauCommandes[i] );
-				} else {
+					nomPresent = true;
+				}
+			}
+			
+			if ( nomPresent ) {
+				listeValide.add( tableauCommandes[i] );
+			} else {
+				if ( !listeErreurs.contains( tableauCommandes[i] ) ) {
 					listeErreurs.add( tableauCommandes[i] );
 					listeErreurs.add( tableauErreurs[0] );
 				}
@@ -36,12 +46,25 @@ public class GestionErreurs {
 	
 	public static String[][] gestionNomPlat( String[][] tableauPlats, String[][] tableauCommandes ) {
 		
+		listeValide.clear();
+		boolean platPresent;
+		
 		for ( int i = 0; i < tableauCommandes.length; i++ ) {
+			platPresent = false;
+			
 			for ( int j = 0; j < tableauPlats.length; j++ ) {
 				
 				if ( tableauCommandes[i][1].equalsIgnoreCase( tableauPlats[j][0] ) ) {
+					platPresent = true;
+				}
+			}
+			
+			if ( platPresent ) {
+				if ( !listeValide.contains( tableauCommandes[i] ) ) {
 					listeValide.add( tableauCommandes[i] );
-				} else {
+				}
+			} else {
+				if ( !listeErreurs.contains( tableauCommandes[i] ) ) {
 					listeErreurs.add( tableauCommandes[i] );
 					listeErreurs.add( tableauErreurs[1] );
 				}
@@ -61,16 +84,27 @@ public class GestionErreurs {
 	
 	public static String[][] gestionQtePlat( String[][] tableauCommandes ) {
 		
+		listeValide.clear();
+		boolean qteValide;
+		
 		for ( int i = 0; i < tableauCommandes.length; i++ ) {
 			
+			qteValide = true;
 			try {
 				Integer.parseInt( tableauCommandes[i][2] );
 			} catch ( Exception e ) {
-				listeErreurs.add( tableauCommandes[i] );
-				listeErreurs.add( tableauErreurs[2] );
+				if ( !listeErreurs.contains( tableauCommandes[i] ) ) {
+					listeErreurs.add( tableauCommandes[i] );
+					listeErreurs.add( tableauErreurs[2] );
+					qteValide = false;
+				}
 			}
 			
-			listeValide.add( tableauCommandes[i] );
+			if ( qteValide ) {
+				if ( !listeValide.contains( tableauCommandes[i] ) ) {
+					listeValide.add( tableauCommandes[i] );
+				}
+			}
 			
 		}
 		
