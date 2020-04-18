@@ -11,6 +11,7 @@ public class Principal {
 		String[][] tableauCommandes;
 		String[][] tableauValide;
 		String[][] tableauErreurs;
+		String[][] tableauFactures;
 		
 		FichierEntree.separerLignesFichier();
 		
@@ -23,7 +24,9 @@ public class Principal {
 		tableauValide = GestionErreurs.gestionQtePlat( tableauValide );
 		tableauErreurs = GestionErreurs.creerTableauCommandesErreurs( GestionErreurs.listeErreurs );
 		
-		Factures.afficherFacture( tableauErreurs, tableauValide );
+		tableauFactures = Factures.calculerFactures(tableauValide, tableauPlats);
+		
+		Factures.afficherFacture( tableauErreurs, tableauFactures );
 	}
 
 }

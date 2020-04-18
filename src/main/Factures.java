@@ -10,8 +10,29 @@ public class Factures {
 	private static final DecimalFormat TOTAL = new DecimalFormat("0.00");
 	private static final DecimalFormat PRE_TOTAL = new DecimalFormat("0.000");
 	
-	public static void calculerFactures(String[][] facture) {
+	public static String[][] calculerFactures(String[][] commandes, String[][] plats) {
+		String[][] factures = new String[commandes.length][2];
 		
+		for (int i = 0; i < factures.length; i++) {
+			factures[i][0] = commandes[i][0];
+			factures[i][1] = "0.00";
+		}
+		
+		for (int i = 0; i < commandes.length; i++) {
+			for (int j = 0; j < plats.length; j++) {
+				for (int k = 0; k < factures.length; k++) {
+					
+					if (commandes[i][1].equalsIgnoreCase(plats[j][0])) {
+						if (factures[k][0].equalsIgnoreCase(commandes[i][0])) {
+							factures[k][1] = String.valueOf(Double.parseDouble(factures[k][1]) + (Double.parseDouble(commandes[i][2]) * Double.parseDouble(plats[j][1])));
+						}
+						
+					}
+				}
+			}
+		}
+		
+		return factures;
 	}
 	
 	public static double calculerTaxes(double sousTotal) {
