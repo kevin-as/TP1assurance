@@ -24,7 +24,7 @@ public class Principal {
 		tableauValide = GestionErreurs.gestionQtePlat( tableauValide );
 		tableauErreurs = GestionErreurs.creerTableauCommandesErreurs( GestionErreurs.listeErreurs );
 		
-		tableauFactures = Factures.calculerFactures(tableauValide, tableauPlats);
+		tableauFactures = Factures.calculerFactures(tableauValide, tableauPlats, tableauClients);
 		
 		Factures.afficherFacture( tableauErreurs, tableauFactures );
 	}

@@ -5,16 +5,13 @@ import java.text.*;
 
 public class Factures {
 	
-	static final double TAUX_TPS = 0.05;
-	static final double TAUX_TVQ = 0.09975;
-	private static final DecimalFormat TOTAL = new DecimalFormat("0.00");
-	private static final DecimalFormat PRE_TOTAL = new DecimalFormat("0.000");
 	
-	public static String[][] calculerFactures(String[][] commandes, String[][] plats) {
+	
+	public static String[][] calculerFactures(String[][] commandes, String[][] plats, String[] clients) {
 		String[][] factures = new String[commandes.length][2];
 		
 		for (int i = 0; i < factures.length; i++) {
-			factures[i][0] = commandes[i][0];
+			factures[i][0] = clients[i];
 			factures[i][1] = "0.00";
 		}
 		
@@ -32,10 +29,24 @@ public class Factures {
 			}
 		}
 		
+		for (int i = 0; i < factures.length; i++) {
+			if (factures[i][1].equals("0.00")) {
+				factures[i][0] = "";
+				factures[i][1] = "";
+			} else {
+				factures[i][1] = calculerTaxes((Double.valueOf(factures[i][1])));
+			}
+		}
+		
 		return factures;
 	}
 	
-	public static double calculerTaxes(double sousTotal) {
+	public static String calculerTaxes(double sousTotal) {
+		final double TAUX_TPS = 0.05;
+		final double TAUX_TVQ = 0.09975;
+		final DecimalFormat TOTAL = new DecimalFormat("#.##");
+		//final DecimalFormat PRE_TOTAL = new DecimalFormat("0.000");
+		
 		double total, montantTPS, montantTVQ;
 		String totalChaine;
 		
@@ -44,7 +55,11 @@ public class Factures {
 		
 		total = sousTotal + montantTPS + montantTVQ;
 		
-		total = Double.valueOf(PRE_TOTAL.format(total));
+		totalChaine = TOTAL.format(total);
+		
+
+		
+		/*total = Double.parseDouble(PRE_TOTAL.format(total));
 		
 		totalChaine = String.valueOf(total);
 		
@@ -53,9 +68,9 @@ public class Factures {
 			total += 0.01;
 		}else {
 			total = Double.valueOf(TOTAL.format(total));
-		}
+		}*/
 		
-		return total;
+		return totalChaine;
 	}
 	
 	public static void afficherFacture(String[][] erreurs, String [][] facture) throws IOException {
