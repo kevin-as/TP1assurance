@@ -10,4 +10,6 @@ Commandes :
 Roger Poutine 1
 Céline Frites 2
 Céline Repas_Poulet 1
+Steeve Frites 1
+Steee Repas_Poulet 1
 Fin
