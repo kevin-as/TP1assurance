@@ -5,8 +5,6 @@ import java.text.*;
 
 public class Factures {
 	
-	
-	
 	public static String[][] calculerFactures(String[][] commandes, String[][] plats, String[] clients) {
 		String[][] factures = new String[clients.length][2];
 		

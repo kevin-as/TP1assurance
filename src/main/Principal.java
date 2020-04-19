@@ -28,5 +28,5 @@ public class Principal {
 		
 		Factures.afficherFacture( tableauErreurs, tableauFactures );
 	}
-
+	
 }
