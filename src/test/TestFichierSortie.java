@@ -15,7 +15,7 @@ public class TestFichierSortie {
 	@Test
 	public void testSauvegarderFichierString() throws IOException {
 		//actualiser date et heure avant de tester à nouveau
-		assertEquals("","Facture-du-17-04-15-14.txt", FichierSortie.sauvegarderFichierString("yes"));
+		assertEquals("","Facture-du-18-04-20-11.txt", FichierSortie.sauvegarderFichierString("yes"));
 	}
 	
 	@Test
