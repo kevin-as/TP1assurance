@@ -8,7 +8,7 @@ public class Factures {
 	
 	
 	public static String[][] calculerFactures(String[][] commandes, String[][] plats, String[] clients) {
-		String[][] factures = new String[commandes.length][2];
+		String[][] factures = new String[clients.length][2];
 		
 		for (int i = 0; i < factures.length; i++) {
 			factures[i][0] = clients[i];
@@ -34,7 +34,7 @@ public class Factures {
 				factures[i][0] = "";
 				factures[i][1] = "";
 			} else {
-				factures[i][1] = calculerTaxes((Double.valueOf(factures[i][1])));
+				factures[i][1] = calculerTaxes((Double.valueOf(factures[i][1]))) + "$";
 			}
 		}
 		
