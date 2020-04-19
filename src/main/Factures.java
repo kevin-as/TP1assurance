@@ -45,7 +45,6 @@ public class Factures {
 		final double TAUX_TPS = 0.05;
 		final double TAUX_TVQ = 0.09975;
 		final DecimalFormat TOTAL = new DecimalFormat("#.##");
-		//final DecimalFormat PRE_TOTAL = new DecimalFormat("0.000");
 		
 		double total, montantTPS, montantTVQ;
 		String totalChaine;
@@ -56,19 +55,6 @@ public class Factures {
 		total = sousTotal + montantTPS + montantTVQ;
 		
 		totalChaine = TOTAL.format(total);
-		
-
-		
-		/*total = Double.parseDouble(PRE_TOTAL.format(total));
-		
-		totalChaine = String.valueOf(total);
-		
-		if(totalChaine.charAt(totalChaine.length()-1) == '5') {
-			total = Double.valueOf(TOTAL.format(total));
-			total += 0.01;
-		}else {
-			total = Double.valueOf(TOTAL.format(total));
-		}*/
 		
 		return totalChaine;
 	}
