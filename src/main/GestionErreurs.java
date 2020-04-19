@@ -10,7 +10,7 @@ public class GestionErreurs {
 	static ArrayList<String[]> listeValide = new ArrayList<String[]>();
 
 	public static String[][] gestionNomClient( String[] tableauClients, String[][] tableauCommandes ) {
-		
+		listeValide.clear();
 		boolean nomPresent;
 		
 		for ( int i = 0; i < tableauCommandes.length; i++ ) {
