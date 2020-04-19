@@ -1,0 +1,10 @@
+### ERREURS ###
+
+Steee Repas_Poulet 1 
+Erreur dans le nom du client. 
+
+FACTURES
+
+Roger 12,07$ 
+Céline 23,86$ 
+Steeve 2,87$ 
